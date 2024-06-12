@@ -41,9 +41,9 @@ app.use("/api/auth", authRoutes); // Mount the auth routes
 //   // res.sendFile(path.resolve(__dirname, '../frontend/build', 'index.html'))
 //   res.sendFile('../frontend/build/index.html', {root: __dirname});
 // })
-app.use(express.static("../frontend/public"));
+app.use(express.static(path.join(__dirname, '../frontend/client/build')));
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../frontend/public', 'index1.html'));
+  res.sendFile(path.join(__dirname, '../frontend/client', 'index.html'));
 });
 
 const port = process.env.PORT || 4000;
