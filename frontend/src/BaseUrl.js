@@ -1,2 +1,2 @@
-const baseUrl = 'http://localhost:4000'
+const baseUrl = 'https://istetrackspace-jl8ha.ondigitalocean.app'
 export default baseUrl
