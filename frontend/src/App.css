@@ -27,14 +27,6 @@ nav {
 
 
 
-@media screen and (min-width: 1000px) {
-  .scrollcontainer {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-}
-
 .truncate {
   white-space: nowrap;
   overflow: hidden;
@@ -60,11 +52,26 @@ nav {
 } */
 
 .bgfiltercard {
-  padding: 20px 10px;
+  padding: 10px 2px;
   border-radius: 10px;
   backdrop-filter: blur(30px);
   background-color: rgba(65, 65, 65, 0.308);
   border: 1px solid rgba(255, 255, 255, 0.089);
+}
+
+@media screen and (min-width: 1000px) {
+  .scrollcontainer {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .bgfiltercard {
+    padding: 20px 10px;
+    border-radius: 10px;
+    backdrop-filter: blur(30px);
+    background-color: rgba(65, 65, 65, 0.308);
+    border: 1px solid rgba(255, 255, 255, 0.089);
+  }
+
 }
 
 
