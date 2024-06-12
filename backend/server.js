@@ -36,13 +36,17 @@ app.use((req, res, next) => {
 app.use("/api/progress", routes); // Mount the general routes
 app.use("/api/auth", authRoutes); // Mount the auth routes
 
-// app.use(express.static("../frontend/src"));
+// app.use(express.static("../frontend/build"));
 // app.get("*", (req,res) => {
 //   // res.sendFile(path.resolve(__dirname, '../frontend/build', 'index.html'))
 //   res.sendFile('../frontend/build/index.html', {root: __dirname});
 // })
 
-const port = process.env.PORT || 3000;
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname+'../frontend/build/index.html'));
+});
+
+const port = process.env.PORT || 4000;
 mongoose
   .connect(process.env.MONGO_URI)
   .then(() => {
