@@ -1,2 +1,2 @@
-const baseUrl = 'https://trackspace-dnfjh.ondigitalocean.app'
+const baseUrl = ''
 export default baseUrl
